@@ -48,7 +48,7 @@ nav ul li a:hover {
 }
 
 body {
-  background-image: url("/assets/path1.svg");
+  background-image: url("../../assets/path1.svg");
   background-repeat: no-repeat;
   background-position: 100% 5%;
 }
@@ -62,7 +62,7 @@ body {
 }
 .main-container .hero-image img {
   width: 40dvw;
-  mask-image: url("/assets/path14.svg");
+  mask-image: url("../../assets/path14.svg");
   mask-repeat: no-repeat;
   mask-size: 40dvw;
 }
@@ -181,7 +181,7 @@ body {
 
 .skills-section {
   margin-top: 10dvw;
-  background-image: url("/assets/skills.svg");
+  background-image: url("../../assets/skills.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100% 50%;
@@ -204,7 +204,7 @@ body {
   text-align: center;
   margin-top: 10dvw;
   margin-bottom: 10dvw;
-  background-image: url("/assets/dots.svg");
+  background-image: url("../../assets/dots.svg");
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 100% 150%;
