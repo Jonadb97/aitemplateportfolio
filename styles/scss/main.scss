@@ -5,11 +5,11 @@ $quaternary: #6d4136ff;
 
 html,
 body {
-  margin: 1dvw 5dvw -1dvw 5dvw;
-  padding: 0;
-  background-color: $secondary;
-  color: $quaternary;
-  scroll-behavior: smooth;
+    margin: 1dvw 5dvw -1dvw 5dvw;
+    padding: 0;
+    background-color: $secondary;
+    color: $quaternary;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -18,311 +18,653 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "sedan-regular";
+    font-family: "sedan-regular";
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
+@media screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
 
-  .nav-logo {
-    img {
-      width: 4dvw;
-    }
-    transition: 0.2s ease-in-out;
-  }
+        .nav-logo {
+            img {
+                width: 4dvw;
+            }
 
-  .nav-logo:hover {
-    transform: scale(1.1);
-  }
-
-  ul {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    gap: 2rem;
-
-    li {
-      a {
-        text-decoration: none;
-        color: $quaternary;
-        transition: 0.2s ease-in-out;
-        font-family: "Montserrat";
-      }
-
-      a:hover {
-        text-decoration: none;
-        color: $primary;
-      }
-    }
-  }
-}
-
-body {
-  background-image: url("../../assets/path1.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 5%;
-}
-
-.main-container {
-  display: flex;
-  margin: 1dvw 5dvw 1dvw 5dvw;
-  gap: 4dvw;
-  justify-content: center;
-  align-items: center;
-  .hero-image {
-    img {
-      width: 40dvw;
-      mask-image: url("../../assets/path14.svg");
-      mask-repeat: no-repeat;
-      mask-size: 40dvw;
-    }
-  }
-
-  .hero-description {
-    transform: translateY(-4dvw);
-
-    h1 {
-      width: 30dvw;
-      font-size: 4dvw;
-    }
-
-    p {
-      width: 30dvw;
-      font-family: "Montserrat";
-      font-size: 2dvw;
-    }
-
-    a {
-      text-decoration: none;
-      color: $primary;
-    }
-
-    .contact-me-btn {
-      padding: 1rem 2rem 1rem 2rem;
-      background-color: $quaternary;
-      color: $secondary;
-      border: none;
-      font-family: "sedan-regular";
-      font-size: 1rem;
-      transition: 0.2s;
-    }
-
-    .contact-me-btn:hover {
-      padding: 1rem 2rem 1rem 2rem;
-      background-color: transparent;
-      color: $primary;
-      border: 1px solid $quaternary;
-      font-family: "sedan-regular";
-      font-size: 1rem;
-    }
-
-    .btn-hero1 {
-      margin-left: 3dvw;
-      border: 1px solid $primary;
-      border-right: none;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      background-color: transparent;
-      padding: 0.8rem;
-      transition: 0.2s;
-      width: 8dvw;
-      font-family: "Montserrat";
-    }
-
-    .btn-hero2 {
-      border: 1px solid $primary;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: transparent;
-      padding: 0.8rem;
-      width: 8dvw;
-      font-family: "Montserrat";
-      transition: 0.2s;
-    }
-
-    .btn-hero1:hover {
-      margin-left: 3dvw;
-      border: 1px solid $primary;
-      border-right: none;
-      color: $terciary;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      background-color: $primary;
-      padding: 0.8rem;
-      width: 8dvw;
-    }
-
-    .btn-hero2:hover {
-      border: 1px solid $primary;
-      color: $terciary;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: $primary;
-      padding: 0.8rem;
-      width: 8dvw;
-    }
-  }
-}
-
-.about-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8dvw;
-
-  .about-card {
-    --c: #42322dff; /* the border color */
-    --b: 2px; /* the border thickness*/
-    --g: 5px; /* the gap on hover */
-
-    padding: calc(var(--g) + var(--b));
-    --_g: #0000 25%, var(--c) 0;
-    background: conic-gradient(
-          from 180deg at top var(--b) right var(--b),
-          var(--_g)
-        )
-        var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
-      conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
-        var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
-    transition: 0.3s, background-position 0.3s 0.3s;
-    border-radius: 3px;
-
-    p {
-        strong {
-            font-family: "sedan-regular";
+            transition: 0.2s ease-in-out;
         }
 
-        font-family: "Montserrat";
-        font-size: 0.9rem;
+        .nav-logo:hover {
+            transform: scale(1.1);
+        }
+
+        ul {
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            gap: 2rem;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $quaternary;
+                    transition: 0.2s ease-in-out;
+                    font-family: "Montserrat";
+                    font-size: 1vw;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                    color: $primary;
+                }
+            }
+        }
     }
 
-    height: 24dvw;
-
-    i {
-      font-size: 6dvw;
+    body {
+        background-image: url("../../assets/path1.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 5%;
     }
 
-    width: 15dvw;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+    .main-container {
+        display: flex;
+        margin: 1dvw 5dvw 1dvw 5dvw;
+        gap: 4dvw;
+        justify-content: center;
+        align-items: center;
 
-  .about-card:hover {
-    --_i: 100%;
-    transition: 0.3s, background-size 0.3s 0.3s;
-  }
-}
+        .hero-image {
+            img {
+                width: 40dvw;
+                mask-image: url("../../assets/path14.svg");
+                mask-repeat: no-repeat;
+                mask-size: 40dvw;
+            }
+        }
 
-.skills-section {
-    margin-top: 10dvw;
-    background-image: url('../../assets/skills.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100% 50%;
+        .hero-description {
+            transform: translateY(-4dvw);
 
-    h1 {
-        font-size: 4dvw;
+            h1 {
+                width: 30dvw;
+                font-size: 4dvw;
+            }
+
+            p {
+                width: 30dvw;
+                font-family: "Montserrat";
+                font-size: 2dvw;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary;
+            }
+
+            .buttons {
+                margin-top: 2rem;
+                height: 100%;
+            }
+
+            .contact-me-btn {
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: $quaternary;
+                color: $secondary;
+                border: none;
+                font-family: "sedan-regular";
+                font-size: 1rem;
+                transition: 0.2s;
+            }
+
+            .contact-me-btn:hover {
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: transparent;
+                color: $primary;
+                border: 1px solid $quaternary;
+                font-family: "sedan-regular";
+                font-size: 1rem;
+            }
+
+            .btn-hero1 {
+                border: 1px solid $primary;
+                border-right: none;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: transparent;
+                padding: 0.8rem;
+                transition: 0.2s;
+                width: 8dvw;
+                font-family: "Montserrat";
+            }
+
+            .btn-hero2 {
+                border: 1px solid $primary;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: transparent;
+                padding: 0.8rem;
+                width: 8dvw;
+                font-family: "Montserrat";
+                transition: 0.2s;
+            }
+
+            .btn-hero1:hover {
+                margin-left: 3dvw;
+                border: 1px solid $primary;
+                border-right: none;
+                color: $terciary;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: $primary;
+                padding: 0.8rem;
+                width: 8dvw;
+            }
+
+            .btn-hero2:hover {
+                border: 1px solid $primary;
+                color: $terciary;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: $primary;
+                padding: 0.8rem;
+                width: 8dvw;
+            }
+        }
     }
 
-    .skills-line {
-        transform: translateY(-3dvw);
-        width: 12dvw;
+    .about-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8dvw;
+
+        .about-card {
+            --c: #42322dff;
+            /* the border color */
+            --b: 2px;
+            /* the border thickness*/
+            --g: 5px;
+            /* the gap on hover */
+
+            padding: calc(var(--g) + var(--b));
+            --_g: #0000 25%, var(--c) 0;
+            background: conic-gradient(from 180deg at top var(--b) right var(--b),
+                    var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+                conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+            transition: 0.3s, background-position 0.3s 0.3s;
+            border-radius: 3px;
+
+            p {
+                strong {
+                    font-family: "sedan-regular";
+                }
+
+                font-family: "Montserrat";
+                font-size: 1.2vw;
+            }
+
+            height: 24dvw;
+
+            i {
+                font-size: 6dvw;
+            }
+
+            width: 15dvw;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about-card:hover {
+            --_i: 100%;
+            transition: 0.3s, background-size 0.3s 0.3s;
+        }
     }
 
-    .skill-card {
+    .skills-section {
+        margin-top: 10dvw;
+        background-image: url('../../assets/skills.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 100% 50%;
+
         h1 {
-            font-size: 2dvw;
+            font-size: 4dvw;
+        }
+
+        .skills-line {
+            transform: translateY(-3dvw);
+            width: 12dvw;
+        }
+
+        .skill-card {
+            h1 {
+                font-size: 2dvw;
+            }
+
+            p {
+                font-family: "Montserrat";
+                font-size: 1vw;
+            }
+        }
+    }
+
+    .experience-section {
+        text-align: center;
+        margin-top: 10dvw;
+        margin-bottom: 10dvw;
+
+        background-image: url('../../assets/dots.svg');
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: 100% 150%;
+
+        h1 {
+            font-size: 4dvw;
+        }
+
+        .experiences {
+            margin-top: 2dvw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .experience-card:first-child {
+            border-top-left-radius: 0px;
+        }
+
+        .experience-card:last-child {
+            border-bottom-right-radius: 0px;
+        }
+
+        .experience-card {
+
+            background-color: transparent;
+            color: $primary;
+            border-radius: 10px;
+            box-shadow: 2px 2px 0px $primary, -2px -2px 0px $quaternary;
+
+
+            h1 {
+                font-size: 1.5dvw;
+                padding: 0.5rem;
+            }
+
+            width: 26dvw;
+            height: 18dvw;
+            text-align: center;
+
+            p {
+                padding: 2rem;
+                font-size: 1vw;
+                text-align: justify;
+            }
+
+        }
+    }
+
+    .contact {
+        margin-top: 1dvw;
+        margin-bottom: 1dvw;
+
+        padding: 2rem;
+
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        border-bottom: 2dvw solid $primary;
+
+        background-color: $primary;
+        color: $terciary;
+
+        h1 {
+            font-size: 4dvw;
+            margin-top: 0;
         }
 
         p {
             font-family: "Montserrat";
+
+            a {
+                color: $terciary;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
+
     }
 }
 
-.experience-section {
-    text-align: center;
-    margin-top: 10dvw;
-    margin-bottom: 10dvw;
-
-    background-image: url('../../assets/dots.svg');
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: 100% 150%;
-    h1 {
-        font-size: 4dvw;
-    }
-
-    .experiences {
-        margin-top: 2dvw;
+@media screen and (max-width: 768px) {
+    nav {
         display: flex;
         flex-direction: row;
-        align-items: center;
+
+        .nav-logo {
+            img {
+                width: 4dvw;
+                transform: translateY(3vw);
+            }
+
+            transition: 0.2s ease-in-out;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.1);
+        }
+
+        ul {
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            gap: 1rem;
+
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $quaternary;
+                    transition: 0.2s ease-in-out;
+                    font-family: "Montserrat";
+                    font-size: 2.5vw;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    body {
+        background-image: url("../../assets/path1.svg");
+        background-size: 30vw;
+        background-repeat: no-repeat;
+        background-position: 100% 5%;
+    }
+
+    .main-container {
+        display: flex;
+        margin: 1dvw 5dvw 1dvw 5dvw;
+        gap: 4dvw;
         justify-content: center;
-        gap: 2rem;
+        align-items: center;
+
+        .hero-image {
+            img {
+                width: 40dvw;
+                mask-image: url("../../assets/path14.svg");
+                mask-repeat: no-repeat;
+                mask-size: 40dvw;
+            }
+        }
+
+        .hero-description {
+            transform: translateY(-4dvw);
+
+            .buttons {
+                margin-top: 2rem;
+            }
+
+            h1 {
+                width: 30dvw;
+                font-size: 4dvw;
+            }
+
+            p {
+                width: 30dvw;
+                font-family: "Montserrat";
+                font-size: 3dvw;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary;
+                font-size: 3vw;
+            }
+
+            .contact-me-btn {
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: $quaternary;
+                color: $secondary;
+                border: none;
+                font-family: "sedan-regular";
+                font-size: 3vw;
+                transition: 0.2s;
+
+            }
+
+            .contact-me-btn:hover {
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: transparent;
+                color: $primary;
+                border: 1px solid $quaternary;
+                font-family: "sedan-regular";
+                font-size: 1rem;
+            }
+
+            .btn-hero1 {
+                border: 1px solid $primary;
+                border-right: none;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: transparent;
+                padding: 0.8rem;
+                transition: 0.2s;
+                width: 8dvw;
+                font-family: "Montserrat";
+            }
+
+            .btn-hero2 {
+                border: 1px solid $primary;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: transparent;
+                padding: 0.8rem;
+                width: 8dvw;
+                font-family: "Montserrat";
+                transition: 0.2s;
+            }
+
+            .btn-hero1:hover {
+                margin-left: 3dvw;
+                border: 1px solid $primary;
+                border-right: none;
+                color: $terciary;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: $primary;
+                padding: 0.8rem;
+                width: 8dvw;
+            }
+
+            .btn-hero2:hover {
+                border: 1px solid $primary;
+                color: $terciary;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: $primary;
+                padding: 0.8rem;
+                width: 8dvw;
+            }
+        }
     }
 
-    .experience-card:first-child {
-        border-top-left-radius: 0px;
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2dvw;
+
+        .about-card {
+            --c: #42322dff;
+            /* the border color */
+            --b: 2px;
+            /* the border thickness*/
+            --g: 5px;
+            /* the gap on hover */
+
+            padding: calc(var(--g) + var(--b));
+            --_g: #0000 25%, var(--c) 0;
+            background: conic-gradient(from 180deg at top var(--b) right var(--b),
+                    var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+                conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+            transition: 0.3s, background-position 0.3s 0.3s;
+            border-radius: 3px;
+
+            display: flex;
+            flex-direction: column;
+
+            p {
+                strong {
+                    font-family: "sedan-regular";
+                }
+
+                font-family: "Montserrat";
+                font-size: 3vw;
+                padding: 1rem;
+            }
+
+            height: 35dvw;
+
+            i {
+                font-size: 6dvw;
+                margin: auto;
+            }
+
+            width: 80dvw;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .about-card:hover {
+            --_i: 100%;
+            transition: 0.3s, background-size 0.3s 0.3s;
+        }
     }
 
-    .experience-card:last-child {
-        border-bottom-right-radius: 0px;
-    }
-
-    .experience-card {
-
-        background-color: transparent;
-        color: $primary;
-        border-radius: 10px;
-        box-shadow: 2px 2px 0px $primary, -2px -2px 0px $quaternary;
-
+    .skills-section {
+        margin-top: 10dvw;
+        background-image: url('../../assets/skills.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 100% 50%;
 
         h1 {
-            font-size: 1.5dvw;
-            padding: 0.5rem;
+            font-size: 4dvw;
         }
-        width: 26dvw;
-        height: 18dvw;
+
+        .skills-line {
+            transform: translateY(-3dvw);
+            width: 12dvw;
+        }
+
+        .skill-card {
+            h1 {
+                font-size: 3dvw;
+            }
+
+            p {
+                font-family: "Montserrat";
+                font-size: 3vw;
+            }
+        }
+    }
+
+    .experience-section {
         text-align: center;
+        margin-top: 10dvw;
+        margin-bottom: 10dvw;
+
+        background-image: url('../../assets/dots.svg');
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: 100% 150%;
+
+        h1 {
+            font-size: 4dvw;
+        }
+
+        .second-row {
+            padding-top: 1rem;
+        }
+
+        .experiences {
+            margin-top: 2dvw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .experience-card:first-child {
+            border-top-left-radius: 0px;
+        }
+
+        .experience-card:last-child {
+            border-bottom-right-radius: 0px;
+        }
+
+        .experience-card {
+
+            background-color: transparent;
+            color: $primary;
+            border-radius: 10px;
+            box-shadow: 2px 2px 0px $primary, -2px -2px 0px $quaternary;
+
+
+            h1 {
+                font-size: 4dvw;
+                padding: 0.5rem;
+            }
+
+            width: 80dvw;
+            height: 50dvw;
+            text-align: center;
+
+            p {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .contact {
+        margin-top: 1dvw;
+        margin-bottom: 1dvw;
+        padding: 2rem;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        border-bottom: 2dvw solid $primary;
+
+        background-color: $primary;
+        color: $terciary;
+
+        h1 {
+            font-size: 4dvw;
+            margin-top: 0;
+        }
 
         p {
-            padding: 1rem;
+            font-family: "Montserrat";
+
+            a {
+                color: $terciary;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
+
     }
-}
-
-.contact {
-  margin-top: 1dvw;
-  margin-bottom: 1dvw;
-
-  padding: 2rem;
-
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-
-  border-bottom: 2dvw solid $primary;
-
-  background-color: $primary;
-  color: $terciary;
-
-  h1 {
-    font-size: 4dvw;
-    margin-top: 0;
-  }
-
-  p {
-    font-family: "Montserrat";
-
-    a {
-      color: $terciary;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
-
 }
